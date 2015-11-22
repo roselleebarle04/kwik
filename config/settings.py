@@ -28,10 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
-# Application definition
-LOGIN_URL = '/account/login/'
-REDIRECT_URL = '/account/'
-
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,8 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'accounts',
-    'advertisements',
+    'ads',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -108,7 +103,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles'),
+    os.path.join(BASE_DIR, 'assets'),
 ]
 
 STATICFILES_FINDERS = (

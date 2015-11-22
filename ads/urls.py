@@ -19,6 +19,6 @@ from . import views
 
 urlpatterns = [
 
-    url(r'^$', views.ad_timeline, name='timeline'),
-    url(r'^info/', views.ad_info, name="ad_info"),
+    url(r'$', views.ad_timeline, name='timeline'),
+    url(r'info', views.ad_info, name="ad_info"),
 ]

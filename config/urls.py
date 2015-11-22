@@ -16,12 +16,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from advertisements import urls as ad_urls
-from accounts import urls as accounts_urls
+from ads import urls as ad_urls
 
 urlpatterns = [
-    url(r'^ad/', include(ad_urls)),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^account/', include(accounts_urls, namespace='account')),
-
+    url(r'^', include(ad_urls)),
 ]

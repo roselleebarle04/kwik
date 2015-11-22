@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kwik</title>
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    
+    <!-- Fonts -->
+<!--     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'> -->
+</head>
+
+<body> 
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Kwik</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              </ul>
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input style="width:100%" type="text" class="form-control" placeholder="Search Kwik">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Post Ad</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-md-3">
+                <p>Recommended Ads</p>
+                <ul>
+                    <li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. </a></li>
+                    <li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. </a></li>
+                    <li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></li>
+                </ul>
+                <p>Top Categories</p>
+                <ul>
+                    <li><a href="#">For Sale</a></li>
+                    <li><a href="#">Rentals</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Electronics</a></li>
+                </ul>
+                <p>Top Locations</p>
+                <ul>
+                    <li><a href="#">Davao</a></li>
+                    <li><a href="#">Cagayan</a></li>
+                    <li><a href="#">Metro Manila</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
