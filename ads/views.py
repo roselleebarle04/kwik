@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def ad_timeline(request): 
 	""" Home View: Timeline/Feed """ 
 	return render(request, 'ads/timeline.html', {})
