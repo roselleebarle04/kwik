@@ -1,0 +1,9 @@
+*.pyc
+*.egg-info
+*.pot
+*.py[co]
+__pycache__
+build/
+migrations/
+avatar/
+MANIFEST
