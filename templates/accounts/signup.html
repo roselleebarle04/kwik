@@ -1,0 +1,39 @@
+{% extends "base_timeline.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="content">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h2>kwik</h2>
+			<p>High Quality Ads For You</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<form role="form">
+				<legend>SIGNUP</legend>
+				<div class="form-group">
+					<label>Full Name</label>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Email</label>
+					<input type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Password</label>
+					<input type="text" class="form-control" placeholder="Password">
+				</div>
+				<div class="form-group">
+					<p>By clicking "Sign Up" you indicate that you have read and agree to the Terms of Service.</p>
+					<input type="submit" class="form-control">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
+
