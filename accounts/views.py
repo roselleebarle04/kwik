@@ -36,3 +36,9 @@ def signup(request):
 		form = UserCreationForm()
 
 	return render(request, 'accounts/signup.html', {'form':form})
+
+def profile(request):
+	return HttpResponse({"Hi"})
+
+def settings(request):
+	return HttpResponse({"Hi"})

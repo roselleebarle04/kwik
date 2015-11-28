@@ -15,8 +15,9 @@
 			</div>
 			<div class="panel-body">
 				<h3 style="margin:0;font-weight:bold"><a href="/info/" style="color:black;">{{item.name}}</a></h3> 
-				
 				<p>{{item.description}}</p>
+				<p>Php{{item.unit_cost}}</p>
+				<p>{{item.quantity}} pc{% if item.quantity > 1%}s{%endif%}. available</p>
 			</div>
 			<div class="panel-footer">
 				<div class="media">
@@ -26,8 +27,7 @@
 				    </a>
 				  </div>
 				  <div class="media-body text-right">
-				    <h4 class="media-heading"><a href="#">Php{{item.unit_cost}}</a></h4>
-				    <p>{{item.quantity}} pc{% if item.quantity > 1%}s{%endif%}. available</p>
+				    <h4 class="media-heading"><a href="#">{{item.date_created.date}}</a></h4>
 				  </div>
 				</div>
 			</div>

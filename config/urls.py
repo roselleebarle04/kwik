@@ -19,8 +19,9 @@ from django.contrib import admin
 
 from . import settings
 from ads import views as ad_views
+from ads import urls as ad_urls
 from accounts import views as account_views
-
+from accounts import urls as account_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -28,9 +29,8 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, {'template_name':'accounts/logout.html'}),
     url(r'^signup/$', account_views.signup, name='signup'),
 
-    url(r'^$', ad_views.ad_timeline, name='timeline'),
-    url(r'^info/$', ad_views.ad_info, name="ad_info"),
-    url(r'^ad/create/$', ad_views.create_ad, name="create_ad"),
+    url(r'^', include(ad_urls)),
+    url(r'^account/', include(account_urls, namespace='account')),
 
-     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 ]

@@ -11,8 +11,12 @@ from .models import *
 def ad_timeline(request): 
 	""" Home View: Timeline/Feed """ 
 	items = Item.objects.all()
+	categories = Category.objects.all()
+	locations = Location.objects.all()
 	return render(request, 'ads/timeline.html', {
-		'items': items
+		'items': items,
+		'categories': categories,
+		'locations': locations,
 		})
 
 @login_required
@@ -21,9 +25,16 @@ def ad_info(request):
 	return render(request, 'ads/info.html', {})
 
 def create_ad(request):
+	categories = Category.objects.all()
+	locations = Location.objects.all()
 	item_form = AddItemForm(request.POST or None, request.FILES or None)
 	if item_form.is_valid():
 		print item_form.cleaned_data
 		item_form.save()
 		return HttpResponseRedirect(reverse('timeline'))
-	return render(request, 'ads/create_ad.html', {'form': item_form})
+	return render(request, 'ads/create_ad.html', {
+		'form': item_form,
+		'categories': categories,
+		'locations': locations,
+	})
+

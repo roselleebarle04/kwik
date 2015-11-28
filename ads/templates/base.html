@@ -32,27 +32,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
+                            {% for cat in categories%}
+                            <li><a href="#">{{cat}}</a></li>
+                            {% endfor %}
                         </ul>
                     </li>
                     <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Location <span class="caret"></span></a>
+                        <a href="#" class="" role="button" aria-haspopup="true" aria-expanded="false">Location</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
+                            {% for loc in locations%}
+                            <li><a href="#">{{loc}}</a></li>
+                            {% endfor %}
                         </ul>
                     </li>
                 </ul>
@@ -69,8 +61,8 @@
                     <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://placehold.it/16x16"> {{ request.user }}</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Items</a></li>
-                            <li><a href="#">Settings</a></li>
+                            <li><a href="{% url 'account:profile' %}">Profile</a></li>
+                            <li><a href="{% url 'account:settings' %}">Settings</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="/logout/">Logout</a></li>
                         </ul>
@@ -81,7 +73,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-8 col-md-offset-2">
                 {% block content %}{% endblock %}
             </div>
         </div>

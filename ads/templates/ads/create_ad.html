@@ -8,31 +8,38 @@
 			{% csrf_token %}
 			<div class="form-group">
 				<label>Photo</label>
+				{{form.errors.photo}}
 				{{form.photo}}
 			</div>
 			<div class="form-group">
 				<label>Name</label>
+				{{form.errors.name}}
 				<input type="text" name="name" class="form-control">
 			</div>
 			<div class="form-group">
 				<label>Description</label>
+				{{form.errors.description}}
 				<input type="text" name="description" class="form-control">
 			</div>
 			<div class="form-group">
 				<label>Category</label>
+				{{form.errors.category}}
 				{{form.category}}
 			</div>
 			<div class="form-group">
 				<label>Location</label>
+				{{form.errors.location}}
 				{{form.location}}
 			</div>
 			<div class="form-group">
 				<label>Price</label>
-				<input type="text" name="unit_cost" class="form-control">
+				{{form.errors.unit_cost}}
+				<input type="number" name="unit_cost" class="form-control">
 			</div>
 			<div class="form-group">
 				<label>Quantity</label>
-				<input type="text" name="quantity" class="form-control">
+				{{form.errors.quantity}}
+				<input type="number" name="quantity" class="form-control">
 			</div>
 			<div class="form-group">
 				<input class="btn btn-danger" type="submit" value="Sell Item">
