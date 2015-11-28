@@ -6,5 +6,7 @@ __pycache__
 build/
 migrations/
 avatar/
+venv/
+docs/
 MANIFEST
 todo.txt

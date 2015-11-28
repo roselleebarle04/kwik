@@ -1,45 +1,33 @@
-{% extends "base_timeline.html" %}
+{% extends "base.html" %}
 {% load staticfiles %}
 
 {% block content %}
-<p>Recent Ads</p>
+<p>Marketplace</p>
 <ul style="list-style:none;padding:0; margin:0">
 	<li>
-		<p style="margin:0">Category: For Sale | Located in Davao | Posted 1h ago (500 Views | 10 Bookmarks)</p>
-		<h3 style="margin:0;font-weight:bold"><a href="/info/" style="color:black;">Wanted For Lease: Commercial Area or Center of Activity </a></h3> 
-		<div class="media">
-		  <div class="media-left">
-		    <a href="#">
-		      <img class="media-object" src="http://placehold.it/50x50" style="border-radius:50%" alt="...">
-		    </a>
-		  </div>
-		  <div class="media-body">
-		    <h4 class="media-heading"><a style="text-decoration:none;color:black" href="#">Roselle M. Ebarle</a></h4>
-		    <p> Studied at MSU-IIT | Roselle has 25 ads and 38 reputation.</p>
-		  </div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<img src="http://placehold.it/800x400" style="width:100%;">
+			</div>
+			<div class="panel-body">
+				<h3 style="margin:0;font-weight:bold"><a href="/info/" style="color:black;">iPhone 6S</a></h3> 
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. Pellentesque posuere quis lectus id malesuada.</p>
+			</div>
+			<div class="panel-footer">
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <img class="media-object" src="http://placehold.it/50x50" style="border-radius:50%" alt="...">
+				    </a>
+				  </div>
+				  <div class="media-body text-right">
+				    <h4 class="media-heading"><a href="#">P 1,000.00</a></h4>
+				    <p>P 880.00 </p>
+				  </div>
+				</div>
+			</div>
 		</div>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. Pellentesque posuere quis lectus id malesuada. <a href="#">(View More Details)</a></p>
-		<p>Bookmark | Downvote | Comment | Share</p>
-	</li>
-	<li>
-		<hr>
-	</li>
-	<li>
-		<p style="margin:0">Category: For Sale | Located in Davao | Posted 1h ago (500 Views | 10 Bookmarks)</p>
-		<h3 style="margin:0;font-weight:bold"><a href="/info/" style="color:black;">Wanted For Lease: Commercial Area or Center of Activity </a><span class="glyphicon glyphicon-star-empty"></span></h3> 
-		<div class="media">
-		  <div class="media-left">
-		    <a href="#">
-		      <img class="media-object" src="http://placehold.it/50x50" style="border-radius:50%" alt="...">
-		    </a>
-		  </div>
-		  <div class="media-body">
-		    <h4 class="media-heading"><a style="text-decoration:none;color:black" href="#">Roselle M. Ebarle</a></h4>
-		    <p> Studied at MSU-IIT | Roselle has 25 ads and 38 reputation.</p>
-		  </div>
-		</div>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. Pellentesque posuere quis lectus id malesuada. <a href="#">(View More Details)</a> </p>
-		<p>Bookmark | Downvote | Comment | Share</p>
 	</li>
 </ul>
 {% endblock content %}

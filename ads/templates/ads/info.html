@@ -1,79 +1,56 @@
-{% extends "base_timeline.html" %}
+{% extends "base_info.html" %}
 {% load staticfiles %}
 
 {% block content %}
-<div class="content">
-	<div class="row">
-		<div class="col-md-2 text-center">
-			<p>Quick</p>
+<div class="row">
+	<div class="col-md-3">
+		<p>About the Owner</p>
+		<div class="media">
+		  <div class="media-left middle">
+		    <a href="#">
+		      <img class="media-object" src="http://placehold.it/50x50" style="border-radius:50%" alt="...">
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <h4 class="media-heading"><a style="text-decoration:none;color:black" href="#">Roselle M. Ebarle</a></h4>
+		    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut dapibus purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		    <a class="btn btn-info" href="#">Contact Now</a>
+		  </div>
 		</div>
-		<div class="col-md-7">
-			<form role="form">
-				<div class="form-group">
-					<input class="form-control" placeholder="Looking for...">
-				</div>
-			</form>
-		</div>
-		<div class="col-md-3">
-			<a href="#">Notifications(1)</a>&nbsp;
-			<a href="">Go to Profile</a> &nbsp;
-			<a href="#" class="btn btn-info ">Post Ad</a>
-		</div>
+		<hr>
+		<p>Recommended Ads</p>
+		<ul>
+			<li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. </a></li>
+			<li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. </a></li>
+			<li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></li>
+		</ul>
 	</div>
-
-	<div class="row">
-		<div class="col-md-2">
-			<p>Top Categories</p>
-			<ul>
-				<li><a href="#">For Sale</a></li>
-				<li><a href="#">Rentals</a></li>
-				<li><a href="#">Jobs</a></li>
-				<li><a href="#">Resume</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Electronics</a></li>
-			</ul>
-			<hr>
-			<p>Top Locations</p>
-			<ul>
-				<li><a href="#">Davao</a></li>
-				<li><a href="#">Cagayan</a></li>
-				<li><a href="#">Metro Manila</a></li>
-			</ul>
-		</div>
-		<div class="col-md-7">
-			<p style="margin:0">Category: For Sale | Located in Davao | Posted 1h ago (500 Views | 10 Bookmarks)</p>
-			<h3 style="margin:0;font-weight:bold"><a href="#" style="color:black;">Wanted For Lease: Commercial Area or Center of Activity </a></h3> 
-			<p style="text-align:center;margin:5px 0">
-				<img src="{% static 'img/logo.jpg' %}" width="100%">
-			</p>
-			
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. Pellentesque posuere quis lectus id malesuada.</p>
-			<p><a href="#">Bookmark(10)</a> | <a href="#">Like(100)</a> | <a href="#">Comment(1)</a> | <a href="#">Share(1)</a></p>
-		</div>
-		<div class="col-md-3">
-			<p>About the Owner</p>
-			<div class="media">
-			  <div class="media-left">
-			    <a href="#">
-			      <img class="media-object" src="http://placehold.it/50x50" style="border-radius:50%" alt="...">
-			    </a>
-			  </div>
-			  <div class="media-body">
-			    <h4 class="media-heading"><a style="text-decoration:none;color:black" href="#">Roselle M. Ebarle</a></h4>
-			    <p> Studied at MSU-IIT | Roselle has 25 ads and 38 reputation.</p>
-			  </div>
+	<div class="col-md-9">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<img src="http://placehold.it/800x400" style="width:100%;">
 			</div>
-			
-			<hr>
-
-			<p>Recommended Ads</p>
-			<ul>
-				<li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. </a></li>
-				<li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. </a></li>
-				<li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></li>
-			</ul>
+			<div class="panel-body">
+				<h3 style="margin:0;font-weight:bold"><a href="/info/" style="color:black;">iPhone 6S</a></h3> 
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. Pellentesque posuere quis lectus id malesuada.</p>
+			</div>
+			<div class="panel-footer">
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <img class="media-object" src="http://placehold.it/50x50" style="border-radius:50%" alt="...">
+				    </a>
+				  </div>
+				  <div class="media-body text-right">
+				    <h4 class="media-heading"><a href="#">P 1,000.00</a></h4>
+				    <p>P 880.00 </p>
+				  </div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
 {% endblock content %}
+ 
