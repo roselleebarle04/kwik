@@ -1,3 +1,18 @@
+body {
+	background-color: #fafafa;
+}
+
+.navbar.navbar-custom {
+	background-color: white;
+}
+
+.navbar.navbar-custom .container {
+	padding: 15px 0;
+}
+
+.panel .panel-heading {
+	padding: 0;
+}
 .content {
 	padding: 50px;
 }
