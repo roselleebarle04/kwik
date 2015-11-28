@@ -65,36 +65,22 @@
                 </form>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Post Ad</a></li>
+                    <li><a href="#">Sell Item</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://placehold.it/16x16"> {{ request.user }}</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Items</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
     <div class="container">
         <div class="row">
-            <!-- <div class="col-md-3">
-                <p>Recommended Ads</p>
-                <ul>
-                    <li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. </a></li>
-                    <li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. </a></li>
-                    <li><a href="#"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a></li>
-                </ul>
-                <p>Top Categories</p>
-                <ul>
-                    <li><a href="#">For Sale</a></li>
-                    <li><a href="#">Rentals</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Resume</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Electronics</a></li>
-                </ul>
-                <p>Top Locations</p>
-                <ul>
-                    <li><a href="#">Davao</a></li>
-                    <li><a href="#">Cagayan</a></li>
-                    <li><a href="#">Metro Manila</a></li>
-                </ul>
-            </div> -->
             <div class="col-md-6 col-md-offset-3">
                 {% block content %}{% endblock %}
             </div>
