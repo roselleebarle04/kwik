@@ -65,14 +65,14 @@
                 </form>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Sell Item</a></li>
+                    <li><a href="{% url 'create_ad' %}">Sell Item</a></li>
                     <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://placehold.it/16x16"> {{ request.user }}</a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Items</a></li>
                             <li><a href="#">Settings</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="/logout/">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

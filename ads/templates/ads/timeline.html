@@ -7,30 +7,32 @@
   <strong>Welcome!</strong> Browse through the marketplace to find the best deals.
 </div>
 <ul style="list-style:none;padding:0; margin:0">
+	{% for item in items %}
 	<li>
 		<div class="panel panel-default">
-			<div class="panel-heading">
-				<img src="http://placehold.it/800x400" style="width:100%;">
+			<div class="panel-heading" style="height:200px;overflow:hidden;">
+				<img src="/media/{{item.photo}}" style="width:100%;">
 			</div>
 			<div class="panel-body">
-				<h3 style="margin:0;font-weight:bold"><a href="/info/" style="color:black;">iPhone 6S</a></h3> 
+				<h3 style="margin:0;font-weight:bold"><a href="/info/" style="color:black;">{{item.name}}</a></h3> 
 				
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu ex urna. Nulla sit amet felis at ante tincidunt egestas eget nec felis. Pellentesque posuere quis lectus id malesuada.</p>
+				<p>{{item.description}}</p>
 			</div>
 			<div class="panel-footer">
 				<div class="media">
 				  <div class="media-left">
 				    <a href="#">
-				      <img class="media-object" src="http://placehold.it/50x50" style="border-radius:50%" alt="...">
+				      <img class="media-object" src="{{item.owner.photo}}" style="border-radius:50%" alt="...">
 				    </a>
 				  </div>
 				  <div class="media-body text-right">
-				    <h4 class="media-heading"><a href="#">P 1,000.00</a></h4>
-				    <p>P 880.00 </p>
+				    <h4 class="media-heading"><a href="#">Php{{item.unit_cost}}</a></h4>
+				    <p>{{item.quantity}} pc{% if item.quantity > 1%}s{%endif%}. available</p>
 				  </div>
 				</div>
 			</div>
 		</div>
 	</li>
+	{% endfor %}
 </ul>
 {% endblock content %}

@@ -17,13 +17,20 @@ from django.conf.urls import include, url
 from django.contrib.auth import views as auth_views
 from django.contrib import admin
 
+from . import settings
 from ads import views as ad_views
+from accounts import views as account_views
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/$', auth_views.login, {'template_name':'accounts/login.html'}),
     url(r'^logout/$', auth_views.logout, {'template_name':'accounts/logout.html'}),
+    url(r'^signup/$', account_views.signup, name='signup'),
 
     url(r'^$', ad_views.ad_timeline, name='timeline'),
     url(r'^info/$', ad_views.ad_info, name="ad_info"),
+    url(r'^ad/create/$', ad_views.create_ad, name="create_ad"),
+
+     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 ]

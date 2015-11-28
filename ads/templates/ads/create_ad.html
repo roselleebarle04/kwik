@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="panel panel-default">
+	<div class="panel-body">
+		<form class="form" method="POST" action="" enctype="multipart/form-data">
+			{% csrf_token %}
+			<div class="form-group">
+				<label>Photo</label>
+				{{form.photo}}
+			</div>
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" name="name" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Description</label>
+				<input type="text" name="description" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Category</label>
+				{{form.category}}
+			</div>
+			<div class="form-group">
+				<label>Location</label>
+				{{form.location}}
+			</div>
+			<div class="form-group">
+				<label>Price</label>
+				<input type="text" name="unit_cost" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Quantity</label>
+				<input type="text" name="quantity" class="form-control">
+			</div>
+			<div class="form-group">
+				<input class="btn btn-danger" type="submit" value="Sell Item">
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock content %}
